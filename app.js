@@ -77,10 +77,10 @@ app.use(( req, res, next) => {
 })
 
 // Static folder
-//app.use(express.static(path.join(__dirname, 'public')))
-if(process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, "client/build")));
-} 
+app.use(express.static(path.join(__dirname, 'public')))
+// if(process.env.NODE_ENV === 'production') {
+//     app.use(express.static(path.join(__dirname, "client/build")));
+// } 
 
 
 // Routes
@@ -90,6 +90,7 @@ app.use('/stories', require('./routes/stories'))
 
 // React
 app.get('/Main',(req,res) => {
+    app.use(express.static(path.join(__dirname, "client/build")));
     res.sendFile(path.join(__dirname,"client/build","index.html"));
 });
 
