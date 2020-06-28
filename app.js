@@ -83,17 +83,15 @@ if(process.env.NODE_ENV === 'production') {
 } 
 
 
-
-
 // Routes
-app.get('/Main',(req,res) => {
-    res.sendFile(path.join(__dirname,"client/build","index.html"));
-});
-
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
 app.use('/stories', require('./routes/stories'))
-// react
+
+// React
+app.get('/Main',(req,res) => {
+    res.sendFile(path.join(__dirname,"client/build","index.html"));
+});
 
 const PORT = process.env.PORT || 7001;
 
