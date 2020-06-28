@@ -6,11 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=production node app.js",
-    "dev": "cross-env NODE_ENV=development nodemon app.js"
+    "mydev": "cross-env NODE_ENV=development nodemon app.js",
+    "server": "nodemon app.js",
+    "client": "cd client && yarn run start",
+    "client_build": "cd client && yarn install && yarn run build",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^5.2.0",
     "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

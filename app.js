@@ -77,12 +77,23 @@ app.use(( req, res, next) => {
 })
 
 // Static folder
-app.use(express.static(path.join(__dirname, 'public')))
+//app.use(express.static(path.join(__dirname, 'public')))
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, "client/build")));
+} 
+
+
+
 
 // Routes
-app.use('/', require('./routes/index'));
+app.get('/',(req,res) => {
+    res.sendFile(path.join(__dirname,"client/build","index.html"));
+});
+
+app.use('/storybook', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
 app.use('/stories', require('./routes/stories'))
+// react
 
 const PORT = process.env.PORT || 7001;
 
