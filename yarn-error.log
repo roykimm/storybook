@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\roykimm\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react react-dom
+  C:\Program Files\nodejs\node.exe C:\Users\roykimm\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add ignore-styles @babel/preset-env @babel/preset-react
 
 PATH: 
   C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\roykimm\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files (x86)\PuTTY;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\roykimm\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\roykimm\AppData\Local\Programs\Python\Python38-32;C:\Program Files\Java\jdk-14\bin;C:\Users\roykimm\AppData\Local\Microsoft\WindowsApps;C:\Users\roykimm\AppData\Roaming\npm;C:\Users\roykimm\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2019.3.4\bin;C:\Program Files\Bandizip;C:\Program Files\heroku\bin;C:\Users\roykimm\AppData\Local\GitHubDesktop\bin;C:\Users\roykimm\AppData\Local\atom\bin

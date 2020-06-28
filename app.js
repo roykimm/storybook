@@ -89,12 +89,29 @@ app.use('/auth', require('./routes/auth'));
 app.use('/stories', require('./routes/stories'))
 
 // React
+// const serverRenderedContent = (req, res, next) => {
+//     app.use(express.static(path.join(__dirname, "client/build")));
+//     fs.readFile(path.resolve('./client/build/index.html'), 'utf8', (err, data) => {
+//         if (err) {
+//             console.error(err);
+//             return res.status(500).send('An error occurred')
+//         }
+//         return res.send(
+//             data.replace(
+//                 '<div id="root"></div>',
+//                 `<div id="root">${ReactDOMServer.renderToString(Test)}</div>`
+//             )
+//         )
+//     })
+// };
+// app.use('/Main',serverRenderedContent); 
+
 app.get('/Main',(req,res) => {
     app.use(express.static(path.join(__dirname, "client/build")));
     res.sendFile(path.join(__dirname,"client/build","index.html"));
 });
 
-const PORT = process.env.PORT || 7001;
+const PORT = process.env.PORT || 7010;
 
 app.listen(
     PORT, 
